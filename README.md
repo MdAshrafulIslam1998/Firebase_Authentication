@@ -400,124 +400,182 @@
    ![image](https://user-images.githubusercontent.com/81482212/151165852-38b4040d-1885-4bf9-936a-99af4248f182.png)
 
 
- ```java
-       public class SignUp extends AppCompatActivity {
+ ```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResetPassword">
+
+    <EditText
+        android:id="@+id/registeredEmailEditTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:text="Registered Email" />
+
+    <Button
+        android:id="@+id/resetPassButtonId"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Password" />
+
+    <TextView
+        android:id="@+id/resetInfoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:text="Check your email. Reset Password Has Been Sent On" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progressbarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
-          /*This is signup activity
-
-          Firebase signUp codes here
-
-           */
-
-
-          private EditText signUpEmailEditText, signUpPasswordEditText;
-          private TextView signInTextView;
-          private Button signUpButton;
-          private FirebaseAuth mAuth;
-          private ProgressBar progressBar;
-
-
-          @Override
-          protected void onCreate(Bundle savedInstanceState) {
-              super.onCreate(savedInstanceState);
-              setContentView(R.layout.activity_sign_up);
-
-              mAuth = FirebaseAuth.getInstance();
-              progressBar = findViewById(R.id.progressbarId);
-
-              signUpEmailEditText = findViewById(R.id.signUpEmailEditTextId);
-              signUpPasswordEditText = findViewById(R.id.signUpPasswordTextId);
-              signUpButton = findViewById(R.id.signUpButtonId);
-              signInTextView = findViewById(R.id.signInTextViewId);
-
-              signInTextView.setOnClickListener(new View.OnClickListener() {
-                  @Override
-                  public void onClick(View view) {
-                      Intent intent = new Intent(getApplicationContext(), SignIn.class);
-                      startActivity(intent);
-                  }
-              });
-
-              signUpButton.setOnClickListener(new View.OnClickListener() {
-                  @Override
-                  public void onClick(View view) {
-
-                      userRegister();
-
-                  }
-
-
-              });
-
-
-          }
-
-          private void userRegister() {
-
-              String email = signUpEmailEditText.getText().toString().trim();
-              String password = signUpPasswordEditText.getText().toString().trim();
-
-
-              if(email.isEmpty()){
-
-                  signUpEmailEditText.setError("Enter an email address");
-                  signUpEmailEditText.requestFocus();
-                  return;
-              }
-
-              if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-
-                  signUpEmailEditText.setError("Enter a valid email address");
-                  signUpEmailEditText.requestFocus();
-                  return;
-              }
-              if(password.isEmpty()){
-
-                  signUpPasswordEditText.setError("Enter a password");
-                  signUpPasswordEditText.requestFocus();
-                  return;
-              }
-              if(password.length()<6){
-
-                  signUpPasswordEditText.setError("Minimum length of a password should be 6");
-                  signUpPasswordEditText.requestFocus();
-                  return;
-              }
-
-              progressBar.setVisibility(View.VISIBLE);
-
-              mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                  @Override
-                  public void onComplete(@NonNull Task<AuthResult> task) {
-
-                      progressBar.setVisibility(View.GONE);
-                      if (task.isSuccessful()) {
-
-                          finish();
-                          Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                          startActivity(intent);
-
-                      } else {
-
-                          if(task.getException() instanceof FirebaseAuthUserCollisionException){
-
-                              Toast.makeText(getApplicationContext(), "User is already Registered", Toast.LENGTH_SHORT).show();
-                          }
-                          else{
-                              Toast.makeText(getApplicationContext(), "Error : "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                          }
-                      }
-
-                  }
-              });
-
-
-
-          }
-      }
+</LinearLayout>
   ```
+  
+   ### 6. Now copy & paste activity-sign_in xml file
+   ![image](https://user-images.githubusercontent.com/81482212/151166304-9f5bdba1-5fbb-4454-b698-fd92b701be14.png)
+
+
+ ```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignIn">
+
+
+
+    <EditText
+        android:id="@+id/signInEmailEditTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/signInPasswordTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:text="Password" />
+
+    <Button
+        android:id="@+id/signInButtonId"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SignIn" />
+
+    <TextView
+        android:id="@+id/forgotPassTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_margin="15dp"
+        android:textStyle="bold"
+        android:text="Forgot Password ?" />
+
+    <TextView
+        android:id="@+id/signUpTextViewId"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Are you not registered? please Sign Up" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progressbarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
+  ```
+  
+   ### 7. Now copy & paste activity_sign_up xml file
+   ![image](https://user-images.githubusercontent.com/81482212/151166527-4aa3e41f-edd0-4d2c-8ae9-fd95834e75fa.png)
+
+
+ ```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUp">
+
+
+
+    <EditText
+        android:id="@+id/signUpEmailEditTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/signUpPasswordTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:text="Password" />
+
+    <Button
+        android:id="@+id/signUpButtonId"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SignUp" />
+
+    <TextView
+        android:id="@+id/signInTextViewId"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Are you registered already? please Sign In" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progressbarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+  ```
+  
   
   
       
