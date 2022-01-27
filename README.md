@@ -1,65 +1,143 @@
 # Firebase Authentication
 
-- Signup
-- SignIn
-- Reset Password
-- SignOut
+<details>
+<summary><b>Java file</b></summary>
+<br>
+<ul>
+<li>MainActivity</li>
+<li>ResetPassword</li>
+<li>SignIn</li>
+<li>SignUp</li>
+<ul>
+</details>
+<details>
+<summary><b>XML file</b></summary>
+<br>
+<ul>
+<li>activity_main</li>
+<li>activity_reset_password</li>
+<li>activity_sign_in</li>
+<li>activity_sign_up</li>
+<ul>
+</details>
+<details>
+<summary><b>Menu directory</b></summary>
+<br>
+<ul>
+<li>menu_layout</li>
+<ul>
+</details>
+<br>
+
+   <details>
+    <summary><b>1. Open firebase console panel</b></summary>
+    <br>
+    <ul>
+    <li>
+![console](https://user-images.githubusercontent.com/81482212/151155743-af1ad8a4-a764-458a-8461-ac55ed814ce6.png)  
+    </li>
+    <ul>
+    </details>
+    <br>
 
 # Short Course
-- ### **Step 1:**
-    ##### Open Your android project
-- ### **Step 2:**
-    ##### Connect Firebase to your project
+### **Step 1: Open Your android project**
+
+### **Step 2: Connect Firebase to your project**
+ <details>
+    <summary><b>1. Open firebase console panel</b></summary>
+    <br>
     
-    ### 1. Open firebase console panel
+![console](https://user-images.githubusercontent.com/81482212/151155743-af1ad8a4-a764-458a-8461-ac55ed814ce6.png) 
     
-    ![console](https://user-images.githubusercontent.com/81482212/151155743-af1ad8a4-a764-458a-8461-ac55ed814ce6.png)
+ </details>
     
-     ### 2. Click on add project
+        
+ <details>
+    <summary><b>2. Click on add project</b></summary>
+    <br>
     
-    ![image](https://user-images.githubusercontent.com/81482212/151156201-ed14e55b-46b1-4996-bb07-55da96a54bfa.png)
+![image](https://user-images.githubusercontent.com/81482212/151156201-ed14e55b-46b1-4996-bb07-55da96a54bfa.png)
     
-     ### 3. Enter your project name
+ </details>
     
-    ![image](https://user-images.githubusercontent.com/81482212/151156548-d97c50ff-a4ae-4cb3-a145-4872148e0fa1.png)
+  
+ <details>
+    <summary><b>3. Enter your project name</b></summary>
+    <br>
     
-     ### 4. Create Project
+![image](https://user-images.githubusercontent.com/81482212/151156548-d97c50ff-a4ae-4cb3-a145-4872148e0fa1.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151156736-44d1b495-705d-4c83-b3bc-f6b3f09146a3.png)
+ </details>
+ <details>
+    <summary><b>4. Create Project</b></summary>
+    <br>
     
-     ### 5. Click android
+![image](https://user-images.githubusercontent.com/81482212/151156736-44d1b495-705d-4c83-b3bc-f6b3f09146a3.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151156865-8e5e7a15-3efa-4807-9356-1e29ebf717d9.png)
+ </details>
+ <details>
+    <summary><b>5. Click android</b></summary>
+    <br>
     
-     ### 6. Fill up the package name of your android project (You will get it on your android project)
+![image](https://user-images.githubusercontent.com/81482212/151156865-8e5e7a15-3efa-4807-9356-1e29ebf717d9.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151157212-7cb55412-21c0-4d8e-8651-e3379de56127.png)
-    ![image](https://user-images.githubusercontent.com/81482212/151157293-820b3b9f-3011-4015-aa65-7cb7df5540b8.png)
+ </details>
+ <details>
+    <summary><b>6. Fill up the package name of your android project (You will get it on your android project)</b></summary>
+    <br>
     
-     ### 7. Download the google service jeson file & paste it on app folder of your android project.
+![image](https://user-images.githubusercontent.com/81482212/151157212-7cb55412-21c0-4d8e-8651-e3379de56127.png)
+![image](https://user-images.githubusercontent.com/81482212/151157293-820b3b9f-3011-4015-aa65-7cb7df5540b8.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151157610-d183ddd4-dfd9-4ad9-9481-95fbf96b1317.png)
-    ![image](https://user-images.githubusercontent.com/81482212/151157827-b5baeac2-254c-4cc4-9ec9-8a22d7b14dc9.png)
+ </details>
+ <details>
+    <summary><b>7. Download the google service jeson file & paste it on app folder of your android project.</b></summary>
+    <br>
     
-     ### 8. Add this line on your project level build.gradle
+![image](https://user-images.githubusercontent.com/81482212/151157610-d183ddd4-dfd9-4ad9-9481-95fbf96b1317.png)
+![image](https://user-images.githubusercontent.com/81482212/151157827-b5baeac2-254c-4cc4-9ec9-8a22d7b14dc9.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151158091-56b31d03-ed8b-452e-bdeb-ab1d49a2de1d.png)
-    ![image](https://user-images.githubusercontent.com/81482212/151158208-6a5b9e16-7287-4bee-9b8f-70d7b68fd675.png)
+ </details>
+ <details>
+    <summary><b>8. Add this line on your project level build.gradle</b></summary>
+    <br>
     
-     ### 9. Add these lines on your app level build.gradle 
+![image](https://user-images.githubusercontent.com/81482212/151158091-56b31d03-ed8b-452e-bdeb-ab1d49a2de1d.png)
+![image](https://user-images.githubusercontent.com/81482212/151158208-6a5b9e16-7287-4bee-9b8f-70d7b68fd675.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151158443-60fd2f7e-42e5-4e8a-a43c-106ac42e9a4a.png)
-    ![image](https://user-images.githubusercontent.com/81482212/151158616-b14cb4b3-d413-4b4b-983f-326ac463b0d9.png)
+ </details>
+ <details>
+    <summary><b>9. Add these lines on your app level build.gradle </b></summary>
+    <br>
     
-     ### 10. Add Firebase auth dependency line from firebase documentations
+![image](https://user-images.githubusercontent.com/81482212/151158443-60fd2f7e-42e5-4e8a-a43c-106ac42e9a4a.png)
+![image](https://user-images.githubusercontent.com/81482212/151158616-b14cb4b3-d413-4b4b-983f-326ac463b0d9.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151159156-31c59257-8353-4b49-9004-d30c9a866550.png)
+ </details>
+ <details>
+    <summary><b>10. Add Firebase auth dependency line from firebase documentations</b></summary>
+    <br>
     
-     ### 11. Sync the project
+![image](https://user-images.githubusercontent.com/81482212/151159156-31c59257-8353-4b49-9004-d30c9a866550.png)
     
-    ![image](https://user-images.githubusercontent.com/81482212/151158827-faf0aff3-ea01-4d8c-8c2b-2d26a947f44a.png)
+ </details>
+ <details>
+    <summary><b>11. Sync the project</b></summary>
+    <br>
     
-     ### 12. Firebase Authentication Connected (Done !)
+![image](https://user-images.githubusercontent.com/81482212/151158827-faf0aff3-ea01-4d8c-8c2b-2d26a947f44a.png)
+    
+ </details>
+ <details>
+    <summary><b>12. Firebase Authentication Connected (Done !)</b></summary>
+    <br>
+    
+    
+ </details>
+    
+
+
 
 - ### **Step 3:**
     ##### Copy paste the codes
