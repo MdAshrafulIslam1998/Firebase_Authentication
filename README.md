@@ -29,21 +29,11 @@
 </details>
 <br>
 
-   <details>
-    <summary><b>1. Open firebase console panel</b></summary>
-    <br>
-    <ul>
-    <li>
-![console](https://user-images.githubusercontent.com/81482212/151155743-af1ad8a4-a764-458a-8461-ac55ed814ce6.png)  
-    </li>
-    <ul>
-    </details>
-    <br>
 
-# Short Course
-### **Step 1: Open Your android project**
 
-### **Step 2: Connect Firebase to your project**
+# Step 1: Open Your android project
+
+# Step 2: Connect Firebase to your project
  <details>
     <summary><b>1. Open firebase console panel</b></summary>
     <br>
@@ -129,32 +119,35 @@
 ![image](https://user-images.githubusercontent.com/81482212/151158827-faf0aff3-ea01-4d8c-8c2b-2d26a947f44a.png)
     
  </details>
+
+####  12. Firebase Authentication Connected (Done !)(ALT+Ent)
+    
+
+
+
+# Step 3: Copy paste the codes
+ 
  <details>
-    <summary><b>12. Firebase Authentication Connected (Done !)</b></summary>
+    <summary><b>1. Make/Copy 3 new activities. ResetPassword,SignIn,SignUp</b></summary>
     <br>
     
+![image](https://user-images.githubusercontent.com/81482212/151159966-de6e51c5-5183-478a-915f-a96e4766d630.png)
     
  </details>
+ <details>
+    <summary><b>2. Copy & paste the whole menu directory (including menu_layout file) on resource folder</b></summary>
+    <br>
     
+![image](https://user-images.githubusercontent.com/81482212/151160513-93a2f730-1924-4f0f-a56f-aa13657cb8fa.png)
+    
+ </details>
+ <details>
+    <summary><b>3. Now copy & paste the ResetPassword java file</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151162495-38b6403c-17a9-44f7-ab68-9df2adf3c137.png)    
 
-
-
-- ### **Step 3:**
-    ##### Copy paste the codes
-    
-     ### 1. Make/Copy 3 new activities. ResetPassword,SignIn,SignUp  
-    
-    ![image](https://user-images.githubusercontent.com/81482212/151159966-de6e51c5-5183-478a-915f-a96e4766d630.png)
-    
-     ### 2. Copy & paste the whole menu directory (including menu_layout file) on resource folder
-    
-    ![image](https://user-images.githubusercontent.com/81482212/151160513-93a2f730-1924-4f0f-a56f-aa13657cb8fa.png)
-    
-     ### 3. Now copy & paste the ResetPassword java file
-    
-    ![image](https://user-images.githubusercontent.com/81482212/151162495-38b6403c-17a9-44f7-ab68-9df2adf3c137.png)
-    
-    ```java
+```java
          public class ResetPassword extends AppCompatActivity {
 
             /*This is reset password activity
@@ -220,13 +213,16 @@
           }
       } 
     
-    ```
+```
     
-     ### 4. Now copy & paste the SignIn java file
+ </details>
+ <details>
+    <summary><b>4. Now copy & paste the SignIn java file</b></summary>
+    <br>
     
-    ![image](https://user-images.githubusercontent.com/81482212/151163465-a23583df-c907-4aa0-a2bf-e086e23f4b1b.png)
-    
-     ```java
+![image](https://user-images.githubusercontent.com/81482212/151163465-a23583df-c907-4aa0-a2bf-e086e23f4b1b.png)
+     
+```java
         public class SignIn extends AppCompatActivity {
 
             /* Sign in activity here
@@ -349,13 +345,15 @@
           }
       }
     
-     ```
-     
-
-     ### 5. Now copy & paste SignUp Java file
-     ![image](https://user-images.githubusercontent.com/81482212/151164583-25ef770b-0e03-4003-b34e-46936cc9d6ff.png)
-
- ```java
+```
+    
+ </details>
+ <details>
+    <summary><b>5. Now copy & paste SignUp Java file</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151164583-25ef770b-0e03-4003-b34e-46936cc9d6ff.png)
+```java
        public class SignUp extends AppCompatActivity {
 
 
@@ -472,13 +470,15 @@
 
           }
       }
-  ```
-  
-   ### 5. Now copy & paste activity_reset_password xml file
-   ![image](https://user-images.githubusercontent.com/81482212/151165852-38b4040d-1885-4bf9-936a-99af4248f182.png)
-
-
- ```xml
+```
+    
+ </details>
+ <details>
+    <summary><b>5. Now copy & paste activity_reset_password xml file</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151165852-38b4040d-1885-4bf9-936a-99af4248f182.png)
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -523,13 +523,15 @@
 
 
 </LinearLayout>
-  ```
-  
-   ### 6. Now copy & paste activity-sign_in xml file
-   ![image](https://user-images.githubusercontent.com/81482212/151166304-9f5bdba1-5fbb-4454-b698-fd92b701be14.png)
-
-
- ```xml
+```
+    
+ </details>
+ <details>
+    <summary><b>6. Now copy & paste activity-sign_in xml file</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151166304-9f5bdba1-5fbb-4454-b698-fd92b701be14.png)
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -593,13 +595,16 @@
 
 
 </LinearLayout>
-  ```
-  
-   ### 7. Now copy & paste activity_sign_up xml file
-   ![image](https://user-images.githubusercontent.com/81482212/151166527-4aa3e41f-edd0-4d2c-8ae9-fd95834e75fa.png)
-
-
- ```xml
+```
+    
+    
+ </details>
+ <details>
+    <summary><b>7. Now copy & paste activity_sign_up xml file</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151166527-4aa3e41f-edd0-4d2c-8ae9-fd95834e75fa.png)
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -652,11 +657,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>
-  ```
+```
+   </details>
   
-  ### 8. Import all the classes (ALT+Ent)
-  
-  ### 9. Done
+    
+####  8. Import all the classes (ALT+Ent)
+####  9. Done
+    
+    
+
+
   
   
   
