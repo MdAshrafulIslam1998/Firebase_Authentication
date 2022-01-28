@@ -31,9 +31,24 @@
 
 
 
-# Step 1: Open Your android project
+# 1. Open Your android project
+  <details>
+    <summary><b>1. Open a new android project</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151499469-1e54d754-deaf-4956-904a-ab9658303b43.png)
+    
+ </details>
+ <details>
+    <summary><b>2. Or open existing android project</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151499585-f803dfcb-2147-42e9-8153-91ebe00e8df3.png)
+    
+ </details>
+ <br>
 
-# Step 2: Connect Firebase to your project
+# 2. Connect Firebase to your project
  <details>
     <summary><b>1. Open firebase console panel</b></summary>
     <br>
@@ -121,11 +136,12 @@
  </details>
 
 ####  12. Firebase Authentication Connected (Done !)(ALT+Ent)
+ <br>
     
 
 
 
-# Step 3: Copy paste the codes
+# 3. Copy paste the codes
  
  <details>
     <summary><b>1. Make/Copy 3 new activities. ResetPassword,SignIn,SignUp</b></summary>
