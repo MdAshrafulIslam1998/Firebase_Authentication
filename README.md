@@ -46,6 +46,15 @@
 ![image](https://user-images.githubusercontent.com/81482212/151499585-f803dfcb-2147-42e9-8153-91ebe00e8df3.png)
     
  </details>
+ 
+ <details>
+    <summary><b>3. Clone this repo on your github desktop & open it on your android studio.</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151503921-ae0236b1-19b3-49ae-b584-66692f41fbd2.png)
+![image](https://user-images.githubusercontent.com/81482212/151504065-07735bda-fa1b-4dd1-8e1b-dc14f874b9f5.png)
+    
+ </details>
  <br>
 
 # 2. Connect Firebase to your project
@@ -135,7 +144,7 @@
     
  </details>
 
-####  12. Firebase Authentication Connected (Done !)(ALT+Ent)
+####  12. Firebase Authentication Connected!
  <br>
     
 
@@ -144,8 +153,19 @@
 # 3. Copy paste the codes
  
  <details>
-    <summary><b>1. Make/Copy 3 new activities. ResetPassword,SignIn,SignUp</b></summary>
-    <br>
+    <summary><b>1. Make 3 new activities.   </b></summary>
+   <br>
+   
+```
+ResetPassword
+```
+```
+SignIn
+```
+```
+SignUp
+```
+      
     
 ![image](https://user-images.githubusercontent.com/81482212/151159966-de6e51c5-5183-478a-915f-a96e4766d630.png)
     
@@ -678,7 +698,15 @@
   
     
 ####  8. Import all the classes (ALT+Ent)
-####  9. Done
+   <details>
+    <summary><b>9. Enable the email/password option on firebase auth</b></summary>
+    <br>
+    
+![image](https://user-images.githubusercontent.com/81482212/151505647-5411c956-346c-43ec-a42b-85a382edbf01.png)
+
+   </details>
+
+####  10. That's it . All Done !!
     
     
 
